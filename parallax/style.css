@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Syne Tactile', cursive;
+    background-color: rgb(75, 8, 137);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.object {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+.container h2 {
+    color: rgb(252, 67, 16);
+    text-shadow: 7px 10px 5px rgb(252, 252, 7);
+    font-size: 100px;
+    font-weight: 500px;
+    justify-content: center;
+    align-self: center;
+    z-index: 11;
+}

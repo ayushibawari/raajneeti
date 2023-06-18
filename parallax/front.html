@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>RAJNEETI</h2>
+        <img src="image/rahul.png" class="object" data-value="-6" alt="">
+        <img src="image/didi.png" class="object" data-value="9" alt="">
+        <img src="image/modi.png" class="object" data-value="-4" alt="">
+        <img src="image/netayadav.png" class="object" data-value="7" alt="">
+        <img src="image/kejri.png" class="object" data-value="4" alt="">
+        <img src="image/netaamit.png" class="object" data-value="3" alt="">
+        <img src="image/netalaalu.png" class="object" data-value="3" alt="">
+        <img src="image/netamaya.png" class="object" data-value="-3" alt="">
+        <img src="image/netauddhav.png" class="object" data-value="-9" alt="">
+
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+
+        function parallax(e) {
+            document.querySelectorAll(".object").forEach(function(move) {
+                var moving_value = move.getAttribute("data-value");
+                var x = (e.clientX * moving_value) / 200;
+                var y = (e.clientY * moving_value) / 200;
+                move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)"
+            });
+
+        }
+    </script>
+</body>
+
+</html>
